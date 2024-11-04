@@ -18,6 +18,7 @@ def convert(pcap_in):
             window_size = packet.tcp.window_size_value
             flags = packet.tcp.flags
 
+
             data.append([timestamp, src_ip, dst_ip, src_port, dst_port, seq, ack, window_size, flags])
 
         except AttributeError:
